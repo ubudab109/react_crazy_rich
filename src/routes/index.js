@@ -13,6 +13,12 @@ const Blank = lazy(() => import('../pages/Blank'))
 const DepoWdData = lazy(()=> import('../pages/DepositWithdraw'))
 const Investment = lazy(()=> import('../pages/Investment'))
 const MyReferral = lazy(()=> import('../pages/Referral'))
+const Transactions = lazy(()  => import('../pages/Transactions'))
+const ChangePassword = lazy(() => import('../pages/ChangePassword'))
+const ProfitTradePages = lazy(() => import('../pages/ProfitTrade'));
+const InvestmentRefund = lazy(() => import('../pages/InvestmentRefund'));
+const ReferralBonus = lazy(() => import('../pages/ReferralBonus'));
+const RefundFinish = lazy(() => import('../pages/RefundFinish'));
 
 /**
  * ⚠ These are internal routes!
@@ -40,6 +46,26 @@ const routes = [
   {
     path: '/referral',
     component: MyReferral
+  },
+  {
+    path: '/transactions/profit-trade',
+    component: ProfitTradePages
+  },
+  {
+    path: '/transactions/investment-refund',
+    component: InvestmentRefund
+  },
+  {
+    path: '/transactions/referral-bonus',
+    component: ReferralBonus
+  },
+  {
+    path: '/transactions/refund-investment',
+    component: RefundFinish
+  },
+  {
+    path: '/change-password',
+    component: ChangePassword,
   },
   {
     path: '/forms',

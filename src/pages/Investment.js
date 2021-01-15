@@ -60,14 +60,15 @@ function Investment(){
 
     return(
         <>
+            <br/>
+            <CTA />
             <PageTitle></PageTitle>
 
-            <CTA />
             <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
-                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="Minimum Invest $ 100,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
-                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="Minimum Invest $ 100,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
-                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="Minimum Invest $ 100,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
-                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="Minimum Invest $ 100,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
+                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="100,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
+                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="1000,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
+                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="5000,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
+                <InvestmentHeaderComp title="CRAZY RICH BOT" subtitle="50000,00" desc1="Get UP TO 5% Daily" desc2="90 days contract circle" desc3="Investor ID: ******" desc4="Investor Password:******" />
             </div>
             <ProfitRefund value="$ 3000" />
 

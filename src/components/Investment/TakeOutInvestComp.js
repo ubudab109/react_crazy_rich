@@ -28,7 +28,7 @@ export const InvestmentTransaction = (props) => {
                     <span className="text-sm">{props.paket_id}</span>
                 </TableCell>
                 <TableCell>
-                    <span className="text-sm">$ {props.amount_invest}</span>
+                    <span className="text-sm text-green-500 dark:text-green-300 font-semibold">$ {props.amount_invest}</span>
                 </TableCell>
                 <TableCell>
                     <span className="text-sm">{props.persen_profit}</span>
@@ -65,13 +65,13 @@ export const WithdrawInvestment = (props) => {
                     <span className="text-sm">{new Date(props.date).toLocaleDateString()}</span>
                 </TableCell>
                 <TableCell>
+                    <span className="text-sm text-green-500 dark:text-green-300 font-semibold">$ {props.wd_beforefee}</span>
+                </TableCell>
+                <TableCell>
+                    <span className="text-sm text-green-500 dark:text-green-300 font-semibold">$ {props.total_wd}</span>
+                </TableCell>
+                <TableCell>
                     <Badge>{props.wd_id}</Badge>
-                </TableCell>
-                <TableCell>
-                    <span className="text-sm">$ {props.wd_beforefee}</span>
-                </TableCell>
-                <TableCell>
-                    <span className="text-sm">$ {props.total_wd}</span>
                 </TableCell>
                 <TableCell>
                     <span className={statusColor()}>{props.status}</span>

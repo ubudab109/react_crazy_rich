@@ -18,9 +18,11 @@ function SidebarContent() {
       </a>
       <ul className="mt-6">
         {routes.map((route) =>
-          route.routes ? (
+
+            route.routes ?  (
             <SidebarSubmenu route={route} key={route.name} />
-          ) : (
+            ) : (
+              
             <li className="relative px-6 py-3" key={route.name}>
               <NavLink
                 exact

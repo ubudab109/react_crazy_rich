@@ -35,6 +35,9 @@ import { ReactComponent as Deposit } from './deposit.svg'
 import { ReactComponent as ArrowRight } from './right.svg'
 import { ReactComponent as CreditCard } from './credit-card.svg'
 import { ReactComponent as UserPlus } from './user-plus.svg'
+import { ReactComponent as FileInvoice } from './file-invoice.svg'
+import { ReactComponent as ProfileCard } from './address-card.svg'
+import { ReactComponent as Briefcase } from './briefcase-solid.svg'
 
 export {
   ButtonsIcon,
@@ -73,5 +76,8 @@ export {
   Deposit,
   ArrowRight,
   CreditCard,
-  UserPlus
+  UserPlus,
+  FileInvoice,
+  ProfileCard,
+  Briefcase
 }

@@ -26,10 +26,10 @@ export const WitdhrawData = (props) => {
                     <Badge>{props.withdrawId}</Badge>
                 </TableCell>
                 <TableCell>
-                    <span>$ {props.usd}</span>
+                    <span className="text-sm text-green-500 dark:text-green-300 font-semibold">$ {props.usd}</span>
                 </TableCell>
                 <TableCell>
-                    <span>$ {props.usdt}</span>
+                    <span className="text-sm text-green-500 dark:text-green-300 font-semibold">$ {props.usdt}</span>
                 </TableCell>
                 <TableCell>
                     <span className={statusColor()}>{props.status}</span>

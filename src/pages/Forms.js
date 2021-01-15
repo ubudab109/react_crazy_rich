@@ -8,6 +8,7 @@ import { Input, HelperText, Label, Select, Textarea } from '@windmill/react-ui'
 import { MailIcon } from '../icons'
 
 function Forms() {
+
   return (
     <>
       <PageTitle>Forms</PageTitle>

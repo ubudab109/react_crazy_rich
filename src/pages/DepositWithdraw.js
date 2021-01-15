@@ -74,7 +74,7 @@ function DepoWdData() {
     <>
         <br/>
         <CTA />
-        <PageTitle>Deposit and Withdraw</PageTitle>
+        <PageTitle></PageTitle>
         <UserBalance />
 
         <br/>
