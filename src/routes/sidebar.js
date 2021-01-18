@@ -60,11 +60,11 @@ const routes = [
       }
     ]
   },
-  // {
-  //   path: '/app/forms',
-  //   icon: 'FormsIcon',
-  //   name: 'Forms',
-  // },
+  {
+    path: '/app/forms',
+    icon: 'FormsIcon',
+    name: 'Forms',
+  },
   // {
   //   path: '/app/cards',
   //   icon: 'CardsIcon',
