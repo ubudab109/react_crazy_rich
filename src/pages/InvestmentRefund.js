@@ -1,6 +1,5 @@
 import React from 'react';
 import CTA from '../components/CTA';
-import InvestmentHeaderComp from '../components/Investment/InvestmentHeaderComp';
 import InvestmentRefundComp from '../components/Transactions/InvestmenRefundComp';
 import PageTitle from '../components/Typography/PageTitle';
 

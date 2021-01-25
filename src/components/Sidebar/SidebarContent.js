@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { Component } from 'react'
 import routes from '../../routes/sidebar'
 import { NavLink, Route } from 'react-router-dom'
 import * as Icons from '../../icons'
 import SidebarSubmenu from './SidebarSubmenu'
 import { Button } from '@windmill/react-ui'
+import {connect} from 'react-redux'
+import AccountInfo from './AccountInfo'
 
 function Icon({ icon, ...props }) {
   const Icon = Icons[icon]
   return <Icon {...props} />
 }
 
-function SidebarContent() {
-  return (
-    <div className="py-4 text-gray-500 dark:text-gray-400">
+
+class SidebarContent extends Component{
+  
+  render(){
+   
+
+    return(
+      <div className="py-4 text-gray-500 dark:text-gray-400">
       <a className="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
-        Windmill
+        Crazy Rich
       </a>
-      <ul className="mt-6">
+      <br/>
+      <br/>
+      <hr/>
+      {/* Acount Info */}
+
+      <AccountInfo/>
+      <hr className="font-bold"/>
+      <ul className="mt-0">
         {routes.map((route) =>
 
             route.routes ?  (
@@ -52,7 +66,12 @@ function SidebarContent() {
         </Button>
       </div>
     </div>
-  )
+    )
+  }
 }
 
-export default SidebarContent
+
+
+
+
+export default SidebarContent;

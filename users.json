@@ -1,0 +1,264 @@
+{
+  "users": [
+    {
+      "result": "Oke"
+    },
+    {
+      "id": 12,
+      "referral_code": "2f353kO",
+      "balance": 300,
+      "username": "Bajor",
+      "password": "123456",
+      "saldo_invest": 0
+    }
+  ],
+  "investment": [
+    {
+      "id": 1,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611134830486,
+      "investment_id": "1",
+      "user_id": 12,
+      "amount": "100"
+    },
+    {
+      "id": 1611134880218,
+      "investment_id": "1",
+      "amount": "100"
+    },
+    {
+      "id": 1611135019710,
+      "investment_id": "1",
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611135895676,
+      "investment_id": "1",
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611135913334,
+      "investment_id": "1",
+      "user_id": 12,
+      "amount": 190
+    },
+    {
+      "id": 1611135968432,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 180
+    },
+    {
+      "id": 1611136603420,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611136963691,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 101
+    },
+    {
+      "id": 1611139945452,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611139969030,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611140003396,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611140290894,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 99
+    },
+    {
+      "id": 1611140326117,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611140352973,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611140376143,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 200
+    },
+    {
+      "id": 1611140390340,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611141518358,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611141904835,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611141913675,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 200
+    },
+    {
+      "id": 1611142933305,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611150849547,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 200
+    },
+    {
+      "id": 1611239615387,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611574249877,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    },
+    {
+      "id": 1611574323447,
+      "investment_id": 1,
+      "user_id": 12,
+      "amount": 100
+    }
+  ],
+  "referral": [
+    {
+      "id": 1611151442221,
+      "referrer_id": "2f353kO",
+      "full_name": "Daus",
+      "email": "daus@daus.com",
+      "password": "123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611151491506,
+      "referrer_id": "2f353kO",
+      "full_name": "rizky",
+      "email": "rizky@mail.com",
+      "password": "123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611151535483,
+      "referrer_id": "2f353kO",
+      "full_name": "rizky",
+      "email": "rizky@rizky.com",
+      "password": "123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611151671309,
+      "referrer_id": "2f353kO",
+      "full_name": "fatur",
+      "email": "fatur@gmail.com",
+      "password": "123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611152028250,
+      "referrer_id": "2f353kO",
+      "full_name": "Daus",
+      "email": "daus@daus.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611152124765,
+      "referrer_id": "2f353kO",
+      "full_name": "testing",
+      "email": "test@test.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611152200991,
+      "referrer_id": "2f353kO",
+      "full_name": "sadasdf",
+      "email": "asdf@sadf.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611153250140,
+      "referrer_id": "2f353kO",
+      "full_name": "Daus",
+      "email": "daus@daus.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611153936534,
+      "referrer_id": "2f353kO",
+      "full_name": "test",
+      "email": "testing@test.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611153974483,
+      "referrer_id": "2f353kO",
+      "full_name": "tsetin",
+      "email": "etsa@tes.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611154067163,
+      "referrer_id": "2f353kO",
+      "full_name": "test",
+      "email": "etfsf@asdfads.com",
+      "password": "123123123",
+      "date": "2021-1-20"
+    },
+    {
+      "id": 1611218814122,
+      "referrer_id": "2f353kO",
+      "full_name": "Testingg ah",
+      "email": "testingah@test.com",
+      "password": "123123123",
+      "date": "2021-1-21"
+    }
+  ]
+}

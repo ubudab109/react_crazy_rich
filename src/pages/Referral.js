@@ -4,38 +4,39 @@ import React, {useEffect, useState} from 'react';
 import CTA from '../components/CTA';
 import PageTitle from '../components/Typography/PageTitle';
 import {UserPlus } from '../icons';
-import { Button, Pagination, Table, TableBody, TableCell, TableContainer, TableFooter, TableHeader } from '@windmill/react-ui';
+import { Button, Pagination, Table, TableBody, TableCell, TableContainer, TableFooter, TableHeader, TableRow } from '@windmill/react-ui';
 import { Link } from 'react-router-dom'
 import ReferralData from '../utils/demo/referralData';
 import { ReferralComp } from '../components/Referral/ReferralComp';
+import { fetchReferral } from '../Redux/Actions/ReferralAction';
 
 
 function Referral(){
     // pages control and setup data for table referral
     const [pageReferral, setpageReferral] = useState(1);
     const [dataReferral, setdataReferral] = useState([]);
-    const [showReferral, setshowReferral] = useState(true);
+    const [totalReferral, settotalReferral] = useState(0)
 
     // pagination setup
     const resultsPerPage = 10;
-    const totalReferral = ReferralData.length
+   
 
     // pagination referral 
     function referralPageChange(p) {
         setpageReferral(p)
     }
 
+    // set total length referral
+    useEffect(() => {
+        fetchReferral().then(data => settotalReferral(data.length))
+    }, [])
+
+
     // effect in paginatino referral
     useEffect(() => {
-        setdataReferral(ReferralData.slice((pageReferral - 1)* resultsPerPage, pageReferral * resultsPerPage))
-    }, [pageReferral])
+        fetchReferral().then(data => setdataReferral(data.slice((pageReferral - 1)* resultsPerPage, pageReferral * resultsPerPage)))
 
-    // check 
-    useEffect(() => {
-        if(totalReferral < 1){
-            setshowReferral(false)
-        }
-    }, [showReferral])
+    }, [pageReferral])
 
     return(
         <>
@@ -47,7 +48,7 @@ function Referral(){
             </PageTitle>
 
             <div className="grid grid-cols-3 gap-4">
-            <Button size="small" tag={Link} to="/app/forms" iconLeft={UserPlus} className="bg-orange-300 dark:bg-orange-500 col-end-7 col-span-2">
+            <Button size="small" tag={Link} to="/app/add-referral" iconLeft={UserPlus} className="bg-orange-300 dark:bg-orange-500 col-end-7 col-span-2">
                 <span>Add New User</span>
             </Button>
             </div>
@@ -64,10 +65,12 @@ function Referral(){
                     </tr>   
                 </TableHeader>
                 <TableBody>
-                    {showReferral ? dataReferral.map((refData, i) => (
-                        <ReferralComp key={i} name={refData.name} email={refData.email} date={refData.join} refCode={refData.refcode} />
-                    )) : 
-                    <TableCell colSpan="4" className="text-center">No Data</TableCell>
+                    {dataReferral.length > 0 ? dataReferral.map((refData, i) => (
+                        <ReferralComp key={i} name={refData.full_name} email={refData.email} date={refData.date} refCode={refData.referrer_id} />
+                    )) :
+                    <TableRow>
+                        <TableCell colSpan="4" className="text-center"> No data</TableCell>
+                    </TableRow> 
                     }
                 </TableBody>
                 </Table>

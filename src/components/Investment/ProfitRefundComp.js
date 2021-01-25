@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, Card } from '@windmill/react-ui';
 import InfoCard from '../Cards/InfoCard';
 import { CreditCard, Withdraw } from '../../icons';
 import RoundIcon from '../RoundIcon';
+import { connect } from 'react-redux';
 
-function ProfitRefund({value}){
-    return(
-        <>
+class ProfitRefund extends Component{
+    render(){
+        return(
+            <>
             <Card className="justify-left">
-                <InfoCard title="Your Balance" value={value}>
+                <InfoCard title="Your Balance" value={`$${this.props.saldo}`}>
                 <RoundIcon
                     icon={CreditCard}
                     iconColorClass="text-orange-500 dark:text-orange-100"
@@ -25,7 +27,12 @@ function ProfitRefund({value}){
                 </div>
             </Card>
         </>
-    )
+        )
+    }
 }
 
-export default ProfitRefund;
+const mapStateToProps = (state) => ({
+    saldo: state.users.saldo_invest
+})
+
+export default connect(mapStateToProps)(ProfitRefund);

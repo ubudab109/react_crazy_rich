@@ -5,6 +5,7 @@ import InfoCard from './Cards/InfoCard';
 import DepositModal from './DepositWithdraw/DepositModal';
 import WithdrawModal from './DepositWithdraw/WithdrawModal';
 import RoundIcon from './RoundIcon';
+import {connect} from 'react-redux';
 
 class UserBalance extends Component{
     state = {
@@ -49,11 +50,10 @@ class UserBalance extends Component{
     render(){
         return(
             <>
-            
             <DepositModal openModal={this.state.DepositModal} closeModal={this.handleClose}/>
             <WithdrawModal openModal={this.state.WithdrawModal} closeModal={this.handleCloseWdModal} />
             <Card className="justify-left">
-                <InfoCard title="Your Balance" value="$ 6389">
+                <InfoCard title="Your Balance" value={`$${this.props.balance}`}>
                 <RoundIcon
                     icon={Wallet}
                     iconColorClass="text-orange-500 dark:text-orange-100"
@@ -79,4 +79,10 @@ class UserBalance extends Component{
     }
 }
 
-export default UserBalance;
+const mapState = (state) => {
+    return{
+        balance: state.users.balance
+    }
+}
+
+export default connect(mapState)(UserBalance);

@@ -23,5 +23,5 @@ export const SidebarProvider = ({ children }) => {
     [isSidebarOpen]
   )
 
-  return <SidebarContext.Provider value={value}>{children}</SidebarContext.Provider>
+  return <SidebarContext.Provider value={value} >{children}</SidebarContext.Provider>
 }

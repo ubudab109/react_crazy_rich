@@ -74,7 +74,7 @@ function Dashboard() {
       </div>
 
       <Card className="mb-8 shadow-md">
-        <CardBody colored className="text-white bg-orange-500">
+        <CardBody colored="true" className="text-white bg-orange-500">
           <p className="text-sm text-white-600 dark:text-white-400">
             Live Trading
           </p>
@@ -110,7 +110,7 @@ function Dashboard() {
           <CardBody>
             <p className="mb-4 font-semibold text-gray-600 dark:text-white">Colored card</p>
             <hr/>
-            <iframe width="560" title="youtube-live" height="315" src="https://www.youtube.com/embed/JVUgD50m_LA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" title="youtube-live" height="315" src="https://www.youtube.com/embed/JVUgD50m_LA" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </CardBody>
         </Card>
       </div>

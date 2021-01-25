@@ -1,11 +1,12 @@
 import { Input, HelperText, Label, Button} from '@windmill/react-ui'
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import CTA from '../components/CTA';
 import SectionTitle from '../components/Typography/SectionTitle';
+import { loadAccount } from '../Redux/Actions/AccountInfoAction';
 
 class ChangePassword extends Component{
     state = {
-        oldPassword: "password",
         input: {},
         valid:{},
     }
@@ -13,7 +14,6 @@ class ChangePassword extends Component{
     constructor(props){
         super(props);
         this.handleInputPassword = this.handleInputPassword.bind(this);
-        // this.validation = this.validation.bind();
     }
 
     handleInputPassword(event){
@@ -23,10 +23,10 @@ class ChangePassword extends Component{
         this.setState({
             input: input
         }, () => {
-            let oldPassword = this.state.oldPassword;
+            let oldPassword = this.props.user_password;
             let valid = {};
 
-            if(!input["oldInput"] || input["oldInput"] != oldPassword){
+            if(!input["oldInput"] || input["oldInput"] !== oldPassword){
                 valid["oldInput"] = false;
             }else{
                 valid["oldInput"] = true;
@@ -38,7 +38,7 @@ class ChangePassword extends Component{
                 valid["newPassword"] = true
             }
 
-            if(!input["rePassword"] || input["rePassword"] != input["newPassword"]){
+            if(!input["rePassword"] || input["rePassword"] !== input["newPassword"]){
                 valid["rePassword"] = false;
             }else{
                 valid["rePassword"] = true;
@@ -48,6 +48,10 @@ class ChangePassword extends Component{
                 valid: valid
             })
         })
+    }
+
+    componentDidMount(){
+        this.props.fetchAccount()
     }
 
     
@@ -111,6 +115,15 @@ class ChangePassword extends Component{
     }
 }
 
+const mapStateToProps = state => ({
+    user_password: state.users.password
+})
 
+const mapDispatchToProps = dispatch => ({
+    fetchAccount: () => {
+        dispatch(loadAccount())
+    }
+})
+ 
 
-export default ChangePassword
+export default connect(mapStateToProps, mapDispatchToProps)(ChangePassword);

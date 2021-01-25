@@ -5,7 +5,7 @@ import React, {useState, Fragment } from 'react'
 import { ArrowRight} from '../../icons'
 import InvestmentModal from './ModalInvestment'
 
-function InvestmentHeaderComp({title, subtitle, desc1, desc2, desc3, desc4}){
+function InvestmentHeaderComp({id, title, subtitle, desc1, desc2, desc3, desc4}){
     const [isModalOpen, setIsModalOpen] = useState(false);
     function openModal(){
         setIsModalOpen(true)
@@ -18,7 +18,7 @@ function InvestmentHeaderComp({title, subtitle, desc1, desc2, desc3, desc4}){
     
     return (
         <Fragment>
-            <InvestmentModal openModal={isModalOpen} closeModal={closeModal} desc1={desc1} desc2={desc2} profit={subtitle} invest={parseInt(subtitle)}/>
+            <InvestmentModal investment_id={id} openModal={isModalOpen} closeModal={closeModal} desc1={desc1} desc2={desc2} profit={subtitle} invest={parseInt(subtitle)}/>
             <Card>
                 <CardBody>
                     <div className="m-2">
